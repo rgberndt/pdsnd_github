@@ -19,11 +19,11 @@ Therefore data from csv files are imported and following question will be answer
 It also displays raw date, depending from user input
 
 ### Files used
-chicago.csv
-new_york_city.csv
-washington.csv
+- chicago.csv
+- new_york_city.csv
+- washington.csv
 
 ### Credits to:
-Stackoverflow Community
-Python documentation
-Pandas documentation
+- Stackoverflow Community
+- Python documentation
+- Pandas documentation
