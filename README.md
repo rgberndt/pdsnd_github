@@ -24,4 +24,6 @@ new_york_city.csv
 washington.csv
 
 ### Credits to:
-
+Stackoverflow Community
+Python documentation
+Pandas documentation
