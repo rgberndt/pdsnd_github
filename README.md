@@ -1,4 +1,4 @@
-### This project was created 07. May 2020
+07. May 2020
 
 ### Explore US Bikeshare data
 
