@@ -65,7 +65,7 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     try:
-                # read csv file, with filename from input and CITY_DATA
+        # read csv file, with filename from input and CITY_DATA
         df = pd.read_csv(CITY_DATA[city])
 
         df['Start Time'] = pd.to_datetime(df['Start Time'])
@@ -79,7 +79,7 @@ def load_data(city, month, day):
             month = MONTH_DATA.index(month) + 1
             df = df.loc[df['month'] == month, :]
 
-            # filter by day of week
+        # filter by day of week
         if day != 'all':
             df = df[df['day_of_week'] == day.title()]
 
@@ -184,7 +184,7 @@ def user_stats(df):
     # TO DO: Display earliest, most recent, and most common year of birth
         print("The earliest birth year is: ", int(df['Birth Year'].max()))
         print("The most recent birth year is: ", int(df['Birth Year'].min()))
-        print("The most common birth year is: ", int(df['Birth Year'].mode()))
+        print("The most common birth year is: ", int(df['Birth Year'].mode())) 
 
     except Exception as e:
         print("Error: ", e)
@@ -193,14 +193,15 @@ def user_stats(df):
     print("-" * 40)
 
 
+#added to display complete table depending from user input
 def display_raw(df):
     watch_raw = input('Would you like to see raw data? yes/no ').lower()
     while watch_raw not in ["yes", "y", "no", "n"]:
         watch_raw = input("Invalid input, please try again: ").lower()
     
     if watch_raw=="yes" or watch_raw=="y":
-        while True:
-            for i in range(5):
+        while True: #endless until user breaks with no or n
+            for i in range(5): #display first 5 items
                 print(df.iloc[i])
                 print()
             watch_raw = input('Would you like to see more? yes/no ').lower()
