@@ -182,9 +182,9 @@ def user_stats(df):
     # TO DO: Display counts of gender
         print("The counts of gender is:\n", df['Gender'].value_counts())
     # TO DO: Display earliest, most recent, and most common year of birth
-        print("The earliest birth year is: ", int(df['Birth Year'].max()))
-        print("The most recent birth year is: ", int(df['Birth Year'].min()))
-        print("The most common birth year is: ", int(df['Birth Year'].mode())) 
+        print("The earliest birth year is: {}".format(int(df['Birth Year'].max())))
+        print("The most recent birth year is: {}".format(int(df['Birth Year'].min())))
+        print("The most common birth year is: {}".format(int(df['Birth Year'].mode()))) 
 
     except Exception as e:
         print("Error: ", e)
